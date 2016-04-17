@@ -1,0 +1,23 @@
+{
+  "name": "med3",
+  "version": "1.0.0",
+  "description": "Graphs using d3 and postgresql data",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Josiah Solomon",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.7.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "pg": "^4.5.3",
+    "pg-promise": "^3.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yosiasz/d3-node-express-postgresql"
+  }
+}
