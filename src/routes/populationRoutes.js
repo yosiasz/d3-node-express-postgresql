@@ -1,33 +1,25 @@
 var cors = require('cors'),
     express = require('express'),
-    populationRouter = express.Router(),  
-    pgp = require("pg-promise")(/*options*/),
-    pg = require("pg");
+    populationRouter = express.Router(),
+    pgp = require("pg-promise")(/*options*/);
 
 var conString = "pg://postgres:password@your.postgres.server.ip/d3nodeexpresspostgresql";
-
-var client = new pg.Client(conString);
-client.connect();
+var db = pgp(conString);
 
 populationRouter.all('*', cors());
 
-var getPopulations = function(){
-    
-    populationRouter.route('/')    
-    .get(function(req,res){
-                var query = client.query("SELECT * from populations");
-                query.on("row", function (row, result) {
-                    result.addRow(row);
+var getPopulations = function () {
+
+    populationRouter.route('/')
+        .get(function (req, res) {
+            db.any("SELECT * from populations")
+                .then(function (data) {
+                    res.send(data);
+                })
+                .catch(function (error) {
+                    // you should handle errors also ;)
                 });
-                query.on("end", function (result) {
-                    res.send(result.rows);
-                });
-            });    
+        });
     return populationRouter;
-        
-};
 
-
-module.exports = {
-  getPopulations: getPopulations
 };
