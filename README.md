@@ -29,7 +29,7 @@ npm install
 #### 4. Running the server
 This will use node to launch the server:
 ```bash
-node server.js
+npm start
 ```
 
 Leave the server running, and now you can access [http://localhost:5000/](http://localhost:5000/).
