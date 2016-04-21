@@ -23,3 +23,7 @@ var getPopulations = function () {
     return populationRouter;
 
 };
+
+module.exports = {
+  getPopulations: getPopulations
+};
