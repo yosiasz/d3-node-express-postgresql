@@ -6,9 +6,9 @@ bar charts using D3.js with a rest api using express.js
 NodeJS runs the server-side of the app. PostgreSQL is used for storing population data to be displayed on graphs.
 pg-promise talks to the database
 
-# 1. [pg-promise](https://www.npmjs.com/package/pg-promise)
-# 2. [express.js](https://www.npmjs.com/package/express)
-# 3. [d3.js](https://www.npmjs.com/package/d3)
+##### 1. [pg-promise](https://www.npmjs.com/package/pg-promise)
+##### 2. [express.js](https://www.npmjs.com/package/express)
+##### 3. [d3.js](https://www.npmjs.com/package/d3)
 
 ### Setting up databases
 Make sure you initialize PostgreSQL before running. 
