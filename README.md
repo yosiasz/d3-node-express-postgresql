@@ -1,4 +1,4 @@
-# med3
+# Chart Stack
 A simple repo to demo use of data from postgresql to plot
 bar charts using D3.js with a rest api using express.js
 
@@ -6,21 +6,30 @@ bar charts using D3.js with a rest api using express.js
 [express.js](https://www.npmjs.com/package/express)
 [d3.js](https://www.npmjs.com/package/d3)
 
-## Installation 
+## Dependencies
+NodeJS runs the server-side of the app. PostgreSQL is used for storing population data to be displayed on graphs.
 
+### Setting up databases
+Make sure you initialize PostgreSQL before running. 
+
+#### Windows
+
+1. Refer to [Detailed installation guides](https://wiki.postgresql.org/wiki/Detailed_installation_guides) to set up a PostgreSQL instance.
+2. Run sample seeding script on your PostgreSQL server
+3. Change config to point to your PostgreSQL server
+
+## Project Setup and Running Server
+#### 1. Initial Setup
 ```bash
- From a command prompt
-  git clone this repo
-  Go to folder d3-node-express-postgresql
-   cd d3-node-express-postgresql
-  Install
-   npm install
-  Run sample sql script in your postgres server
-  or from cmd shell Run
-    psql -U postgres -h your.postgres.server.ip -d d3nodeexpresspostgresql -a -f /tmp/sampledatabase.sql
-  Change config to point to your postgresql server
-  Run
-    npm start
-  Browse to see charts
-   http://localhost:5000/
+git clone https://github.com/yosiasz/d3-node-express-postgresql.git
+cd d3-node-express-postgresql/
+npm install
 ```
+
+#### 4. Running the server
+This will use node to launch the server:
+```bash
+node server.js
+```
+
+Leave the server running, and now you can access [http://localhost:5000/](http://localhost:5000/).
