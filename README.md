@@ -23,6 +23,7 @@ Make sure you initialize PostgreSQL before running.
 ```bash
 git clone https://github.com/yosiasz/d3-node-express-postgresql.git
 cd d3-node-express-postgresql/
+npm install -g nodemon
 npm install
 ```
 
