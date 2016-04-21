@@ -2,12 +2,11 @@
 A simple repo to demo use of data from postgresql to plot
 bar charts using D3.js with a rest api using express.js
 
-[postgresql.js](https://www.npmjs.com/package/mssql)
-[express.js](https://www.npmjs.com/package/express)
-[d3.js](https://www.npmjs.com/package/d3)
-
 ## Dependencies
 NodeJS runs the server-side of the app. PostgreSQL is used for storing population data to be displayed on graphs.
+1. [pg-promise](https://www.npmjs.com/package/pg-promise)
+2. [express.js](https://www.npmjs.com/package/express)
+3. [d3.js](https://www.npmjs.com/package/d3)
 
 ### Setting up databases
 Make sure you initialize PostgreSQL before running. 
